@@ -1,24 +1,15 @@
-cmake_minimum_required(VERSION 3.12)
-project(Gist VERSION 1.0.7)
+cmake_minimum_required (VERSION 3.12)
+project (Gist VERSION 1.0.7)
 
-set(CMAKE_CXX_STANDARD 11)
-option(BUILD_TESTS "Build tests" OFF)
+set (CMAKE_CXX_STANDARD 11)
 
-# Check for FFTW
-find_package(FFTW QUIET)
-if(FFTW_FOUND)
-    message(STATUS "FFTW found.")
-    add_definitions(-DUSE_FFTW)
-else()
-    message(STATUS "Using KISS FFT as fallback.")
-    add_definitions(-DUSE_KISS_FFT)
-endif()
+option (BUILD_TESTS "Build tests" OFF)
 
-add_subdirectory(src)
+add_subdirectory (src)
 
-if(BUILD_TESTS)
+if (BUILD_TESTS)
     enable_testing()
-    add_subdirectory(tests)
-endif()
+    add_subdirectory (tests)
+endif (BUILD_TESTS)
 
-set(CMAKE_SUPPRESS_REGENERATION true)
+set (CMAKE_SUPPRESS_REGENERATION true)
