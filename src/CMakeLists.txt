@@ -1,5 +1,3 @@
-target_include_directories(Gist PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
-
 add_library (
     Gist STATIC
     AccelerateFFT.cpp
@@ -19,6 +17,8 @@ add_library (
     Yin.cpp
     Yin.h
 )
+
+target_include_directories(Gist PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 source_group (Source src)
 
