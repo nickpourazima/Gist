@@ -22,8 +22,8 @@ add_library (
 target_include_directories(Gist 
     PUBLIC 
     ${CMAKE_CURRENT_SOURCE_DIR}
-    ${FFTW_INCLUDE_DIRS}
+    ${GIST_FFTW_INCLUDE_DIRS}
 )
 
 target_compile_definitions (Gist PUBLIC -DUSE_FFTW)
-target_link_libraries(Gist PRIVATE ${FFTW_LIBRARIES})
+target_link_libraries(Gist PRIVATE ${GIST_FFTW_LIBRARIES})
