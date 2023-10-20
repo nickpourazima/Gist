@@ -1,4 +1,4 @@
-include_directories (${CMAKE_CURRENT_SOURCE_DIR}/src)
+target_include_directories(Gist PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 add_library (
     Gist STATIC
@@ -23,3 +23,4 @@ add_library (
 source_group (Source src)
 
 target_compile_definitions (Gist PUBLIC -DUSE_FFTW)
+target_link_libraries(Gist PRIVATE ${FFTW_LIBRARIES})
