@@ -1,4 +1,3 @@
-find_package(FFTW REQUIRED)
 add_library (
     Gist STATIC
     AccelerateFFT.cpp
